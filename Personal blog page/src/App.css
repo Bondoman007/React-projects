@@ -1,0 +1,292 @@
+/* Basic Body Styling */
+body {
+  background-color: #f0f2f5;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1em;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ffdd57;
+  transform: scale(1.1);
+}
+
+.navbar-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Container for the Entire App */
+.App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styling */
+.App-header {
+  background-color: #023e8a;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Logo Styling with Animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Link Styling */
+.App-link {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Blog Post Container */
+.post-container {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Blog Post Header */
+.post-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.post-header h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Blog Post Content */
+.post-content {
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Image Styling */
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Author and Date Styling */
+.post-meta {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Main Content Container */
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Responsive Design for Posts */
+@media (max-width: 1200px) {
+  .posts-container .post-container {
+    flex-basis: 48%; /* Two posts per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-container .post-container {
+    flex-basis: 100%; /* One post per row */
+  }
+}
+
+/* Footer Styling */
+.App-footer {
+  background-color: #023e8a;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.App-footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.create-post-button {
+  display: flex;
+  width: 20%;
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #48cae4, #0077b6);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.create-post-button:hover {
+  background: linear-gradient(135deg, #0096c7, #023e8a);
+}
+
+.blog-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Keyframes for logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive breakpoints for different zoom levels */
+@media (min-width: 1200px) {
+  .posts-container .post-container {
+    flex-basis: 30%; /* Three posts per row */
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .posts-container .post-container {
+    flex-basis: 45%; /* Two posts per row */
+  }
+}
+
+@media (max-width: 799px) {
+  .posts-container .post-container {
+    flex-basis: 100%; /* One post per row */
+  }
+}
